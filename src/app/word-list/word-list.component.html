@@ -1,0 +1,21 @@
+<ActionBar title="Word List">
+  <NavigationButton text="Back" android.systemIcon="ic_menu_back"></NavigationButton>
+</ActionBar>
+
+<TabView>
+  <StackLayout *tabItem="{title: 'Daily'}">
+    <ListView [items]="dailyWords">
+      <ng-template let-word="item">
+        <Label [text]="word" class="list-item"></Label>
+      </ng-template>
+    </ListView>
+  </StackLayout>
+
+  <StackLayout *tabItem="{title: 'Monthly'}">
+    <ListView [items]="monthlyWords">
+      <ng-template let-word="item">
+        <Label [text]="word" class="list-item"></Label>
+      </ng-template>
+    </ListView>
+  </StackLayout>
+</TabView>
